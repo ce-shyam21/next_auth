@@ -1,0 +1,118 @@
+1) npx create-next-app
+√ What is your project named? ... client
+√ Would you like to use TypeScript? ... No 
+√ Would you like to use ESLint? ...  Yes
+√ Would you like to use Tailwind CSS? ... No 
+√ Would you like to use `src/` directory? ...  Yes
+√ Would you like to use App Router? (recommended) ...  Yes
+? Would you like to customize the default import alias (@/*)? » No 
+
+2)cd client
+
+
+3) npm install next-auth
+
+# used for the easy Autthentication and autorization managemant
+
+4)npm run dev
+5) in side app folder create api/auth/[...nextauth]
+6) craete option.js
+7) create route.js
+
+8) find this all 
+
+NEXTAUTH_URL= http://localhost:3000
+NEXTAUTH_SECRET=/BLKJBGNJOGBOUJREFOIUBEFJO => this is random 
+GOOGLE_CLIENT_ID=
+GOOGLE_CLIENT_SECRET=
+GITHUB_ID=
+GITHUB_SECRET=
+
+9)http://localhost:3000/api/auth/signin 
+visit this for proper functioning 
+
+10)setup mongobd
+
+11)setup prisma
+=> npm install @prisma/client @auth/prisma-adapter
+=> npm install prisma --save-dev
+
+=>npx prisma init
+
+✔ Your Prisma schema was created at prisma/schema.prisma
+  You can now open it in your favorite editor.
+
+warn You already have a .gitignore file. Don't forget to add `.env` in it to not commit any private information.
+
+Next steps:
+1. Set the DATABASE_URL in the .env file to point to your existing database. If your database has no tables yet, read https://pris.ly/d/getting-started
+2. Set the provider of the datasource block in schema.prisma to match your database: postgresql, mysql, sqlite, sqlserver, mongodb or cockroachdb.
+3. Run prisma db pull to turn your database schema into a Prisma schema.
+4. Run prisma generate to generate the Prisma Client. You can then start querying your database.
+5. Tip: Explore how you can extend the ORM with scalable connection pooling, global caching, and real-time database events. Read: https://pris.ly/cli/beyond-orm
+
+@map("_id") add this in every id becase mongodb is no sql
+
+12) add database url in the .env file
+
+13)
+D:\next_auth_project\client>npx prisma generate
+Environment variables loaded from .env
+Prisma schema loaded from prisma\schema.prisma
+
+✔ Generated Prisma Client (v5.19.1) to .\node_modules\@prisma\client in 73ms
+
+Start by importing your Prisma Client (See: http://pris.ly/d/importing-client)
+
+Tip: Curious about the SQL queries Prisma ORM generates? Optimize helps you enhance your visibility: https://pris.ly/tip-2-optimize
+
+
+14)check in data base after login again that provider are working properly or not 
+
+15)Api to add a new user crreate util folder inside the utils 
+ = > inside it create user.js
+
+16)npm install uuid
+
+17)npm install bcryptjs
+
+18) backed is completed whole 
+=> http://localhost:3000/api/auth/signin
+
+
+next_auth_project/
+│
+├── client/
+│   ├── auth/
+│   │   ├── [...nextauth]/
+│   │
+├── fonts/
+│   ├── GeistMonoVF.woff
+│   ├── GeistVF.woff
+│
+├── node_modules/
+│
+├── prisma/
+│   ├── schema.prisma
+│
+├── src/
+│   ├── app/
+│   │   ├── api/
+│   └── ...
+│
+├── lib/
+│   ├── prisma.js
+│
+├── utils/
+│   ├── user.js
+│
+├── .env
+├── .env.local
+├── .eslintcrc.json
+├── .gitignore
+├── jsconfig.json
+├── next.config.mjs
+├── package.json
+├── package-lock.json
+├── README.md
+└── Backend_Work.txt

@@ -1,0 +1,29 @@
+1) create front extend
+=> http://localhost:3000/CreateAccount
+2) create folder CreateAccount inside app folder
+3) create 2 file in it 
+    .1) page.js
+    .2)CreateAccount.module.css
+
+3) npm install axios
+
+
+POST /api/users 500 in 395ms you will get this error if you use already defiled use that is john 
+// so install it but close server one time 
+4)npx prisma generate
+
+5)npm run dev  //  restsrt the server 
+
+6) to store user sesssion and manipulate session info the need session provide context
+    => so create the context folder in side in create AuthProvide.js
+    => and in layout.js wrap body function inside the AuthProvide
+    <AuthProvider>
+        <body className={`${geistSans.variable} ${geistMono.variable}`}>
+          {children}
+        </body>
+      </AuthProvider>
+
+7) We are not use the default login page of the next js 
+ => So create the new page.js file for it inside the login folder 
+ => whenerer you create your own pager then need to define in the options object 
+ => define that you have change the default page of next.js by your own
